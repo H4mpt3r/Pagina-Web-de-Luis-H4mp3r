@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+        <header class="header">
+            <div class="container">
+                <label for="menu">
+                    <img src="images/logo-vector-universidad-nacional-de-jose-clemente-paz.jpg" alt="">
+                </label>                
+                <h1>Unpaz, Pagina de Luis G. Poplavsky de programacion 1</h1>
+                <p>Soy estudiante de la universidad de Jose C. Paz que hizo sus primeros juegos prototipados con mi Compañero Lautaro Miozzo. Estoy aprendiendo a programar en Godot y HTML Y CSS, y estoy haciendo mis primeros juegos en Godot.</p>
+
+                <a href="https://yosoyluis11.itch.io/metrofight" class="boton-redireccion"> haz click aca para ver el MetroFight en itch.io</a>
+                
+                <a href="https://yosoyluis11.itch.io/la-ruta-del-slime" class="boton-redireccion"> haz click aca para ver el La ruta del slime en itch.io</a>
+                
+                <a href="https://scratch.mit.edu/projects/1370262955" class="boton-redireccion"> haz click aca para ver mi juego de scratch</a>
+                
+                <button id="cambiar-color" class="boton-redireccion" type="button">Cambiar color de fondo</button>
+
+                <nav class="navbar">
+
+                </nav>
+            </div>
+
+        </header>
+
+        <script>
+            const botonColor = document.getElementById("cambiar-color");
+            const contenedor = document.querySelector(".container");
+            const colores = [
+                "rgba(231, 224, 224, 0.5)",
+                "rgba(173, 216, 230, 0.7)",
+                "rgba(144, 238, 144, 0.7)",
+                "rgba(255, 182, 193, 0.7)"
+            ];
+            let indiceColor = 0;
+
+            botonColor.addEventListener("click", function () {
+                indiceColor = (indiceColor + 1) % colores.length;
+                contenedor.style.backgroundColor = colores[indiceColor];
+            });
+        </script>
+</body>
+</html>
